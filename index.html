@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+  <title>時光入口測試</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+    crossorigin="anonymous">
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js"
+    crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+  <main id="app">
+    <!-- 相機原始畫面不直接顯示 -->
+    <video
+      id="camera"
+      autoplay
+      muted
+      playsinline>
+    </video>
+
+    <!-- 處理完成後的畫面 -->
+    <canvas id="output"></canvas>
+
+    <section id="welcome">
+      <h1>即時去背測試</h1>
+      <p>開啟相機後，請將人物完整放入畫面。</p>
+      <button id="startButton" type="button">開啟相機</button>
+    </section>
+
+    <div id="status">尚未啟動</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
